@@ -152,7 +152,7 @@ jobs:
           repository: Ilhasoft/kubernetes-manifests-platform
           directory: ./kubernetes-manifests/
           branch: main
-          message: "From Integrations WebApp Build (Push-Tag)"
+          message: "From Rapidpro Archiver Build (Push-Tag)"
 
       - name: Generated Image
         run: |

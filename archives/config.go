@@ -25,6 +25,10 @@ type Config struct {
 	Delete           bool   `help:"whether to delete messages and runs from the db after archival (default false)"`
 	ExitOnCompletion bool   `help:"whether archiver should exit after completing archiving job (default false)"`
 	StartTime        string `help:"what time archive jobs should run in UTC HH:MM "`
+	SingleMonth      bool   `help:"wheter archiver should archive only a single month"`
+	OrgID            string `help:"org id"`
+	Year             string `help:"year that archive should be created ex: 2022"`
+	Month            string `help:"month that archive should be created ex: 01"`
 }
 
 // NewConfig returns a new default configuration object
@@ -52,6 +56,7 @@ func NewConfig() *Config {
 		Delete:           false,
 		ExitOnCompletion: false,
 		StartTime:        "00:01",
+		SingleMonth:      false,
 	}
 
 	return &config

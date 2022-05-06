@@ -1016,11 +1016,5 @@ func ArchiveOrgSingleMonth(ctx context.Context, db *sqlx.DB, config *Config, s3C
 		return nil, err
 	}
 
-	if config.Delete {
-		// deleted, err = DeleteArchivedOrgRecords(ctx, now, config, db, s3Client, org, archiveType)
-		// if err != nil {
-		// 	return nil, errors.Wrapf(err, "error deleting archived records")
-		// }
-	}
 	return archive, nil
 }
